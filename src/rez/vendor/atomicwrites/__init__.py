@@ -41,7 +41,8 @@ if sys.platform != 'win32':
         # Ensure that filenames are written to disk
         fd = os.open(directory, 0)
         try:
-            _proper_fsync(fd)
+            if sys.platform == 'win32':
+                _proper_fsync(fd)
         finally:
             os.close(fd)
 
