@@ -1,4 +1,4 @@
-
+# sh completion
 _rez_complete_fn()
 {
     COMPREPLY=($(COMP_LINE=${COMP_LINE} COMP_POINT=${COMP_POINT} _rez-complete))
