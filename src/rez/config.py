@@ -560,13 +560,16 @@ class Config(six.with_metaclass(LazyAttributeMeta, object)):
             path = os.path.normpath(path)
             return path
 
-        packages_path = normalise_path(self.local_packages_path)
-        paths = list(map(normalise_path, self.packages_path))
-
-        if packages_path in paths:
-            paths.remove(packages_path)
-
-        return paths
+        packages_path = self.packages_path[:]
+        # normalise path before filtering
+        normalised_local = normalise_path(self.local_packages_path)
+        normalised_paths = list(map(normalise_path, self.packages_path))
+        if normalised_local in normalised_paths:
+            # remove it from non-normalised by index
+            index = normalised_paths.index(normalised_local)
+            packages_path.remove(packages_path[index])
+        # so the repository that is not filesystem based won't get normpath
+        return packages_path
 
     def get_completions(self, prefix):
         def _get_plugin_completions(prefix_):

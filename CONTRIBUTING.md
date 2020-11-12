@@ -9,7 +9,7 @@ sending a pull request. Please follow these guidelines:
 4.  Follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
     for docstrings
 5.  Use *spaces*, not *tabs*;
-6.  Update the [bleeding-rez version](https://github.com/mottosso/bleeding-rez/blob/master/src/bleeding-rez/utils/_version.py) appropriately, and follow [semantic versioning](https://semver.org/);
+6.  Update the [bleeding-rez version](https://github.com/mottosso/bleeding-rez/blob/master/src/rez/utils/_version.py) appropriately, and follow [semantic versioning](https://semver.org/);
 7.  Update [the changelog](https://github.com/mottosso/bleeding-rez/blob/master/CHANGELOG.md); see the section below for more details
 8.  Use [this format](https://help.github.com/articles/closing-issues-using-keywords/) to mention the issue(s) your PR closes
 9.  Add relevant tests to demonstrate that your changes work

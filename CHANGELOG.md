@@ -1,6 +1,13 @@
 # Change Log
 
 
+## 2.40.5 (2020-11-06)
+
+**Notes**
+
+This update enables using non-filesystem based package repository. ([\#97](https://github.com/mottosso/bleeding-rez/pull/97) )
+
+
 ## 2.40.4 (2020-02-13)
 
 **Notes**
